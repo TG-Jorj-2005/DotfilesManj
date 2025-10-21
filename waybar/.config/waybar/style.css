@@ -1,0 +1,32 @@
+#clock {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 10px;
+    background-color: #1e1e2e;
+
+}
+
+#clock:hover {
+    background-color: #313244;
+
+
+}
+
+#battery {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 10px;
+    background-color: #1e1e2e;
+}
+
+#battery:hover {
+    background-color: #313244;
+}
+
+#modules-left,
+#modules-center,
+#modules-right {
+    background-color: #1fffff;
+}
