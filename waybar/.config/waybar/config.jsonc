@@ -19,7 +19,7 @@
         "tray"
     ],
     "custom/OS": {
-        "format": " ",
+        "format": "  ",
     },
     "hyprland/workspaces": {
         "format": "",
@@ -80,7 +80,7 @@
         }
     },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 30,
         "max-icons": 5
     },
 }
