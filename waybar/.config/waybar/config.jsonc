@@ -1,0 +1,86 @@
+{
+    "layer": "top",
+    "output": "eDP-1",
+    "spacing": 4,
+    "position": "top",
+    "height": 35,
+    "modules-left": [
+        "custom/OS",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "wlr/taskbar"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "custom/OS": {
+        "format": " ",
+    },
+    "hyprland/workspaces": {
+        "format": "",
+        "format-active": "",
+        "max-length": 6,
+    },
+    "wlr/taskbar": {
+        "icon-size": 14,
+    },
+    "network": {
+        "format": "   {essid}",
+        "format-icons": {
+            "wired": " ",
+            "wireless": "  ",
+            "disconnected": "睊 "
+        },
+        "interval": 10,
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        "format": "   {volume}% ",
+        "format-muted": "  Muted ",
+        "on-click": "pavucontrol",
+        "mouse-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "mouse-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "interval": 5,
+    },
+    "battery": {
+        "format": "  {capacity}% ",
+        "format-charging": "  {capacity}% ",
+        "format-critical": "  {capacity}% ",
+        "interval": 30,
+    },
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "max-icons": 5
+    },
+}
