@@ -1,9 +1,15 @@
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: #000;
+    border-radius: 8px;
+}
+
 #clock {
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     color: #ffffff;
     padding: 0 10px;
-    background-color: #1e1e2e;
 
 }
 
@@ -18,15 +24,47 @@
     font-size: 14px;
     color: #ffffff;
     padding: 0 10px;
-    background-color: #1e1e2e;
 }
 
 #battery:hover {
     background-color: #313244;
 }
 
-#modules-left,
-#modules-center,
-#modules-right {
-    background-color: #1fffff;
+#network {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#network:hover {
+    background-color: #313244;
+}
+
+#pulseaudio {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#pulseaudio:hover {
+    background-color: #313244;
+}
+
+#custom-OS {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #19C709;
+    background-color: #000;
+    padding: 0 10px;
+
+}
+
+#custom-OS:hover {
+    background-color: #313244;
+}
+
+window#waybar {
+    background-color: transparent;
 }
