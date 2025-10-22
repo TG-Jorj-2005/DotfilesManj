@@ -1,7 +1,7 @@
 #!/bin/zsh
 MONITOR="eDP-1"
 
-VIDEO="$HOME/DotfilesManj/hypr/.config/hypr/wallpaper/moe.mp4"
+VIDEO="$HOME/DotfilesManj/hypr/.config/hypr/wallpaper/skull.mp4"
 
 sleep 2
 
