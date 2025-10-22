@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "output": "eDP-1",
-    "spacing": 10,
     "position": "top",
     "height": 35,
     "modules-left": [
@@ -13,44 +12,57 @@
     ],
     "modules-right": [
         "network",
-        "pulseaudio",
+        "custom/brightness",
+        "custom/volume",
         "battery",
         "clock",
         "tray"
     ],
     "custom/OS": {
-        "format": "  ",
+        "format": " ",
     },
     "hyprland/workspaces": {
-        "format": "",
-        "format-active": "",
-        "max-length": 6,
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "active": "", // bulină plină
+            "default": "" // bulină goală
+        },
+        "format-active": "<span foreground='#89b4fa'></span>", // albastru deschis (activ)
+        "format-inactive": "<span foreground='#6c7086'></span>", // gri (inactiv)
+        "format-urgent": "<span foreground='#f38ba8'></span>", // roz (urgent)
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "wlr/taskbar": {
-        "icon-size": 14,
+        "icon-size": 16,
     },
     "network": {
-        "format": "   {essid}",
+        "format": " ",
         "format-icons": {
             "wired": " ",
             "wireless": "  ",
             "disconnected": "睊 "
         },
+        "on-click": "networkmanager_dmenu",
         "interval": 10,
         "tooltip": false,
     },
-    "pulseaudio": {
-        "format": "   {volume}% ",
-        "format-muted": "  Muted ",
-        "on-click": "pavucontrol",
-        "mouse-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-        "mouse-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
-        "interval": 5,
+    "custom/volume": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/volume_bar.sh",
+        "interval": 2,
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.5",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "tooltip": false
     },
     "battery": {
-        "format": "  {capacity}% ",
-        "format-charging": "  {capacity}% ",
-        "format-critical": "  {capacity}% ",
+        "format": "  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-critical": "  {capacity}%",
         "interval": 30,
     },
     "clock": {
@@ -82,5 +94,13 @@
     "tray": {
         "icon-size": 30,
         "max-icons": 5
+    },
+    "custom/brightness": {
+        "format": "  {}",
+        "exec": "~/.config/waybar/scripts/Light_vol.sh",
+        "interval": 2,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
     },
 }

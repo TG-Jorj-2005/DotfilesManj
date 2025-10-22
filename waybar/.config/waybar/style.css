@@ -1,16 +1,20 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    transition: all 0.1s ease-in-out;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: #000;
-    border-radius: 8px;
+    background-color: #02111B;
 }
 
 #clock {
-    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
-    color: #ffffff;
+    color: rgba(212, 195, 0, 1);
     padding: 0 10px;
-
 }
 
 #clock:hover {
@@ -20,9 +24,8 @@
 }
 
 #battery {
-    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
-    color: #ffffff;
+    color: rgba(0, 255, 0, 0.8);
     padding: 0 10px;
 }
 
@@ -31,9 +34,9 @@
 }
 
 #network {
-    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
-    color: #ffffff;
+    color: #89b4fa;
+
     padding: 0 10px;
 }
 
@@ -41,30 +44,50 @@
     background-color: #313244;
 }
 
-#pulseaudio {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    color: #ffffff;
-    padding: 0 10px;
-}
-
-#pulseaudio:hover {
-    background-color: #313244;
+#custom-volume {
+    color: #9A7AD5;
+    /* verde Catppuccin */
+    border-radius: 8px;
+    padding: 4px 10px;
+    margin-left: 6px;
+    transition: all 0.25s ease;
 }
 
 #custom-OS {
-    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
-    color: #19C709;
-    background-color: #000;
+    color: #32BCA2;
     padding: 0 10px;
 
-}
-
-#custom-OS:hover {
-    background-color: #313244;
 }
 
 window#waybar {
     background-color: transparent;
+}
+
+#workspaces {
+
+    font-size: 14px;
+}
+
+#workspaces button.active {
+    color: #32BCA2;
+    border-radius: 4px;
+
+}
+
+#custom-brightness {
+    color: #f9e2af;
+    border-radius: 8px;
+    padding: 1px 3px;
+    margin-left: 6px;
+    transition: all 0.25s ease;
+}
+
+#custom-brightness.low {
+    color: #6c7086;
+}
+
+#custom-brightness.high {
+    color: #f9e2af;
+    text-shadow: 0 0 6px rgba(250, 179, 135, 0.5);
 }
