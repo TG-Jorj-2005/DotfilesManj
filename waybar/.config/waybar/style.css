@@ -3,6 +3,7 @@
     transition: all 0.1s ease-in-out;
     border-radius: 15px;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .modules-left,
@@ -12,7 +13,6 @@
 }
 
 #clock {
-    font-size: 14px;
     color: rgba(212, 195, 0, 1);
     padding: 0 10px;
 }
@@ -24,7 +24,6 @@
 }
 
 #battery {
-    font-size: 14px;
     color: rgba(0, 255, 0, 0.8);
     padding: 0 10px;
 }
@@ -34,7 +33,6 @@
 }
 
 #network {
-    font-size: 14px;
     color: #89b4fa;
 
     padding: 0 10px;
@@ -54,7 +52,6 @@
 }
 
 #custom-OS {
-    font-size: 14px;
     color: #32BCA2;
     padding: 0 10px;
 
@@ -64,10 +61,6 @@ window#waybar {
     background-color: transparent;
 }
 
-#workspaces {
-
-    font-size: 14px;
-}
 
 #workspaces button.active {
     color: #32BCA2;

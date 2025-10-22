@@ -92,7 +92,7 @@
         }
     },
     "tray": {
-        "icon-size": 30,
+        "icon-size": 40,
         "max-icons": 5
     },
     "custom/brightness": {
