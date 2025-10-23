@@ -92,8 +92,8 @@
         }
     },
     "tray": {
-        "icon-size": 40,
-        "max-icons": 5
+        "icon-size": 28,
+        "max-icons": 4
     },
     "custom/brightness": {
         "format": "  {}",
