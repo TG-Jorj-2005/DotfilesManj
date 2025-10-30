@@ -2,7 +2,7 @@
     "layer": "top",
     "output": "eDP-1",
     "position": "top",
-    "height": 35,
+    "height": 32,
     "modules-left": [
         "custom/OS",
         "hyprland/workspaces"
